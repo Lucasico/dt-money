@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
        --text-title: #363F5F;
        --text-body: #969CB3;
        --shape: #FFFFFF;
+       --green: #33CC95;
     }
 
     *{
@@ -36,6 +37,16 @@ export const GlobalStyle = createGlobalStyle`
         background:var(--background);
         //para as fonts ficarem mais nitidas
         -webkit-font-smoothing: antialiased;
+    }
+
+    //o input, textearea e button por padrão não importa a font do body
+    body, input, textarea, button{
+        font-family:'Poppins', sans-serif;
+        font-weight:400;
+    }
+
+    h1,h2,h3,h4,h5,h6, strong{
+        font-weight:600;
     }
 
     button{
