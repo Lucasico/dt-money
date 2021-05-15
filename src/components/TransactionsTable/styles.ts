@@ -1,0 +1,43 @@
+import styled from "styled-components";
+
+export const Container = styled.div`
+  margin-top: 4rem;
+  display: flex;
+  //por padrão a table não ocupa 100% da tela
+  table {
+    width: 100%;
+    //top and bottom //left and right
+    border-spacing: 0 0.5em;
+
+    th {
+      color: var(--text-body);
+      font-weight: 400;
+      //top and bottom //left and right
+      padding: 1rem 2rem;
+      line-height: 1.5rem;
+    }
+
+    td {
+      //top and bottom //left and right
+      padding: 1rem 2rem;
+      border: 0;
+      background-color: var(--shape);
+      font-weight: 400;
+      color: var(--text-body);
+      border-radius: 0.25rem;
+      //quando o td for o primeiro td
+      &:first-child {
+        color: var(--text-title);
+      }
+
+      //todo td que tenha esse atributo class === deposit
+      &.deposit {
+        color: var(--green);
+      }
+
+      &.withdraw {
+        color: var(--red);
+      }
+    }
+  }
+`;
