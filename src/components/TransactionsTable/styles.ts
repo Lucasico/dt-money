@@ -3,6 +3,8 @@ import styled from "styled-components";
 export const Container = styled.div`
   margin-top: 4rem;
   display: flex;
+  overflow: auto;
+
   //por padrão a table não ocupa 100% da tela
   table {
     width: 100%;

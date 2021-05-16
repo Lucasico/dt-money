@@ -59,4 +59,42 @@ export const GlobalStyle = createGlobalStyle`
         cursor:not-allowed;
     }
 
+    .react-modal-overlay{
+        background-color:rgba(0,0,0,0.5);
+        //deixar o overlay em cima da tela
+        position:fixed;
+        //t = 0, b = 0, r = 0 e l = 0 estou dizendo que com isso o overlay vai ocupar toda a tela
+        top:0;
+        bottom:0;
+        right:0;
+        left:0;
+        display:flex;
+        align-items:center;
+        justify-content:center
+
+    }
+      //classe para estilizar o conteudo
+    .react-modal-content{
+        width:100%;
+        max-width:576px;
+        background-color:var(--background);
+        padding:3rem;
+        //relativa pois vai ter o x pra fechar que vai ser absoluto
+        position:relative;
+        border-radius:0.25rem;
+    }
+
+    .react-modal-close{
+        position:absolute;
+        right:1.5rem;
+        top:1.5rem;
+        border:none;
+        background:transparent;
+        transition: filter 0.2s;
+
+        &:hover{
+            filter:brightness(0.5)
+        }
+    }
+
 `;
