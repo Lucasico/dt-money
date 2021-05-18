@@ -21,7 +21,7 @@ export const Container = styled.div`
 
     td {
       //top and bottom //left and right
-      padding: 1rem 2rem;
+      padding: 1rem 2rem 1rem 4rem;
       border: 0;
       background-color: var(--shape);
       font-weight: 400;

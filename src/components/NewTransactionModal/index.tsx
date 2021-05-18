@@ -4,6 +4,7 @@ import closeImg from "../../assets/Vector.svg";
 import incomeImg from "../../assets/Entradas.svg";
 import outcomeImg from "../../assets/Saidas.svg";
 import { Container, TransactionTypeContainer, RadioBox } from "./styles";
+import { api } from "../../services/api";
 
 //config necessaria para questões de acessibilidade
 ReactModal.setAppElement("#root");
@@ -25,7 +26,13 @@ export function NewTransactionModal({
   //com ação do usuario
   function handleCreateNewTransaction(event: FormEvent) {
     event.preventDefault();
-    console.log(type, title, value, category);
+    const dataToSubmit = {
+      type,
+      title,
+      value,
+      category,
+    };
+    api.post("transactions", dataToSubmit);
   }
 
   return (
