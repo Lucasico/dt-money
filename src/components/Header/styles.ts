@@ -46,3 +46,9 @@ export const Content = styled.div`
     }
   }
 `;
+
+export const ContainerButton = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+`;

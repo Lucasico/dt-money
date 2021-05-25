@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 //import do mirage => uma especie de api fake, dentro do proprio frontEnd
 import { createServer, Model } from "miragejs";
+import { ModifieldThemeProvider } from "./hooks/useModifielTheme";
 import App from "./App";
 
 //cria o server
@@ -49,10 +50,11 @@ createServer({
   },
 });
 
-//parte padrão do react
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ModifieldThemeProvider>
+      <App />
+    </ModifieldThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

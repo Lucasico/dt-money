@@ -1,15 +1,20 @@
 import { createGlobalStyle } from "styled-components";
 
+/**
+    tambem poderia ser: background: ${(props) =>
+    props.isActive ? "colorA" : "ColorB"}
+ */
 export const GlobalStyle = createGlobalStyle`
     :root{
-       --background:#f0f2f5;
-       --red: #E52E4D;
-       --blue:#5429CC;
-       --blue-light:#6933FF;
-       --text-title: #363F5F;
-       --text-body: #969CB3;
-       --shape: #FFFFFF;
-       --green: #33CC95;
+       --background:${({ theme }) => theme.backgrond};
+       --red: ${({ theme }) => theme.colors.red};
+       --blue:${({ theme }) => theme.colors.blue};
+       --blue-light:${({ theme }) => theme.colors.blueLight};
+       --text-title: ${({ theme }) => theme.colors.textTitle};
+       --text-body: ${({ theme }) => theme.colors.textBody};
+       --shape: ${({ theme }) => theme.colors.shape};
+       --green: ${({ theme }) => theme.colors.green};
+       --input-modal:${({ theme }) => theme.colors.inputsModal}
     }
 
     *{

@@ -13,14 +13,13 @@ export const Container = styled.div`
 
     th {
       color: var(--text-body);
-      font-weight: 400;
-      //top and bottom //left and right
+      font-weight: bold;
       padding: 1rem 2rem;
       line-height: 1.5rem;
     }
 
     td {
-      //top and bottom //left and right
+     
       padding: 1rem 2rem 1rem 4rem;
       border: 0;
       background-color: var(--shape);
@@ -34,7 +33,8 @@ export const Container = styled.div`
 
       //todo td que tenha esse atributo class === deposit
       &.deposit {
-        color: var(--green);
+        color: var(--text-body);
+        font-weight: bold;
       }
 
       &.withdraw {

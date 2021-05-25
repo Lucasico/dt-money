@@ -13,8 +13,8 @@ export const Container = styled.form`
     height: 4rem;
     border-radius: 0.25rem;
 
-    border: 1px solid #d7d7d7;
-    background-color: #e7e9ee;
+    border: none;
+    background-color: var(--input-modal);
     font-weight: 400;
     font-size: 1rem;
 
